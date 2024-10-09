@@ -798,6 +798,11 @@ export default defineComponent({
 
       this.cashAmount = fyo.pesa(0);
       this.transferAmount = fyo.pesa(0);
+      this.setItems();
+
+      if (!this.defaultCustomer) {
+        this.sinvDoc.party = '';
+      }
     },
     toggleModal(modal: ModalName, value?: boolean) {
       if (value) {
